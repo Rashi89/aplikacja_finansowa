@@ -1,12 +1,12 @@
 body
 {
-	background-image: url("img/webb-dark.png");
+	background-image: url("img/morocco-blue.png");
 	font-family: 'Lobster', cursive;
 }
 
 h1.logo
 {
-	color:white;
+	color:#1c525e;
 	font-size: 45px;
 	text-align: center;
 	text-transform: uppercase;
@@ -18,15 +18,19 @@ h1.logo
 {
 	background-color:white;
 	width:300px;
-	padding: 10px;
+	padding: 10px 50px 50px 50px;
 	margin-left:auto;
 	margin-right:auto;
+	margin-top:50px;
+	-webkit-box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+	box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
 
 }
 
 h2
 {
-	color:red;
+	color:#1c525e;
 	font-size: 25px;
 	margin-left:auto;
 	margin-right:auto;
@@ -35,17 +39,57 @@ h2
 	width:300px;
 }
 
-.input
+input[type=text],
+input[type=password]
 {
 	width:300px;
 	background-color:#efefef;
-	color:#666666;
-	border: 2px solid #dddddd;
+	color:#666;
+	border: 2px solid #ddd;
 	border-radius: 5px;
 	font-size:20px;
 	padding:10px;
+	box-sizing: border-box;
+	outline:none;
+	margin-top:10px;
+	
+}
+input[type=text]:focus,
+input[type=password]:focus
+{
+	-webkit-box-shadow: 0px 0px 10px 2px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 10px 2px rgba(28,82,94,1);
+	box-shadow: 0px 0px 10px 2px rgba(28,82,94,1);
+	border: 1px solid #65b7c9;
+	background-color:#bde7f0;
+	color:#2897b0;
+}
+input[type=submit]
+{
+	width: 300px;
+	background-color:#1eba5f;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
 }
 
+input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+input[type=submit]:hover
+{
+	background-color:#1da94e;
+}
 
 
 

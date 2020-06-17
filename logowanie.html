@@ -27,10 +27,12 @@
 	
 		<main>
 				<div id="container">
-					<h2> Logowanie i rejestracja </h2>
-					<div id="login">Login <input type ="text"></div>
-					<div id="haslo">Hasło <input type ="password"></div>
-					<div id="submit">Zaloguj się <input type = "submit"></div>
+					<form>
+							<h2> Logowanie i rejestracja </h2>
+							<div id="login"><input type ="text" placeholder="Login" onfocus="this.placeholder=''" onblur="this.placeholder='Login'"></div>
+							<div id="haslo"><input type ="password" placeholder="Password"onfocus="this.placeholder=''" onblur="this.placeholder='Password'"></div>
+							<div id="submit"> <input type = "submit" value="Zaloguj się"></div>
+					</form>
 				</div>
 	
 		</main>
