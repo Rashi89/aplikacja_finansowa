@@ -1,0 +1,104 @@
+body
+{
+	background-image: url("img/morocco-blue.png");
+	font-family: 'Lobster', cursive;
+	margin:0 !important;
+}
+
+.logo
+{
+	width:100%;
+}
+
+h1.logo
+{
+	color:#1c525e;
+	font-size: 45px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	
+}
+
+#container
+{
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#menu
+{
+	width: 100%;
+	background-color: #2c3136;
+	color: #939ca3;
+	margin-top: 20px;
+	padding:10px 0;
+	text-align: center;
+	
+}
+
+ol
+{
+	padding: 0;
+	margin: 0;
+	list-style-type:none;
+	font-size: 25px;
+	height: 35px;
+	line- height:200%;
+	display:inline-block;
+}
+
+ol a
+{
+	color: #196678;
+	text-decoration:none;
+	display:block;
+}
+
+ol > li
+{
+	float: left;
+	width:250px;
+	height:40px;
+	border-right: 1px dashed #196678;
+	
+}
+
+ol > li:first-child
+{
+	border-left: 1px dashed #196678;
+}
+
+ol > li:hover
+{
+	background-color:#394754;
+}
+
+ol >li:hover >a
+{
+	color:#43c3e0;
+}
+
+#stopka
+{
+	width: 100%;
+	background-color: #2c3136;
+	height:47px;
+	color: white;
+	font-size:20px;
+	text-align: center;
+}
+
+.zawartosc
+{
+	margin-top:20px;
+	width:1000px;
+	height:200px;
+	color:black;
+	font-size:30px;
+	min-height: 480px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
