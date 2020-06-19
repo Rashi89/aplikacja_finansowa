@@ -10,13 +10,15 @@ body
 	width:100%;
 }
 
+
 h1.logo
 {
-	color:#1c525e;
-	font-size: 45px;
+	color:#003845;
+	font-size: 35px;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 8px;
+	height:25px;
 	
 }
 
@@ -82,9 +84,21 @@ ol >li:hover >a
 
 #stopka
 {
+	margin-top:40px;
 	width: 100%;
 	background-color: #2c3136;
-	height:47px;
+	height:32px;
+	color: white;
+	font-size:20px;
+	text-align: center;
+}
+
+#stopka_menu
+{
+	margin-top:70px;
+	width: 100%;
+	background-color: #2c3136;
+	height:32px;
 	color: white;
 	font-size:20px;
 	text-align: center;
@@ -94,11 +108,199 @@ ol >li:hover >a
 {
 	margin-top:20px;
 	width:1000px;
-	height:200px;
+	height:684px;
 	color:black;
 	font-size:30px;
-	min-height: 480px;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.formularz
+{
+	background-color:white;
+	width:700px;
+	padding: 10px 50px 30px 50px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	-webkit-box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+	box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+}
+
+fieldset
+{
+	border: 10px double #1c525e;
+}
+
+legend
+{
+	font-size:50px;
+	color:#1c525e;
+}
+
+legend:hover
+{
+	color:black;
+}
+
+#komentarz
+{
+	resize:none;
+}
+
+input[type=submit],
+input[type=reset]
+{
+	width:300px;
+	background-color:#efefef;
+	color:#666;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size:20px;
+	padding:10px;
+	box-sizing: border-box;
+	outline:none;
+	margin-top:10px;
+	
+}
+
+.dodaj input[type=submit]
+{
+	width: 300px;
+	background-color:#1eba5f;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+}
+
+.dodaj input[type=submit]:hover
+{
+	background-color:#1da94e;
+}
+
+.dodaj input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+.reset input[type=reset]
+{
+	width: 300px;
+	background-color:#e84343;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+}
+
+.reset input[type=reset]:hover
+{
+	background-color:#b02a2a;
+}
+
+.reset input[type=reset]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+#kwota input[type=number]
+{
+	width: 300px;
+	font-size:15px;
+	color: black;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	border: 3px solid #196678;
+}
+
+#kwota input[type=number]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+
+#data input[type=date]
+{
+	width: 300px;
+	font-size:15px;
+	color: black;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	border: 3px solid #196678;
+}
+
+#data input[type=date]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+#kategoria
+{
+	width: 300px;
+	font-size:15px;
+	color: black;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	border: 3px solid #196678;
+}
+#kategoria:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+.opcja
+{
+	color:#287c8f;
+}
+
+.opcja:hover
+{
+	color:black;
+}
+
+textarea
+{
+	border: 3px solid #196678;
+}
+
+textarea:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
 }
