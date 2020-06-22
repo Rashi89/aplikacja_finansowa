@@ -304,3 +304,23 @@ textarea:focus
 	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
 	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
 }
+
+#platnosc
+{
+	width: 300px;
+	font-size:15px;
+	color: black;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	border: 3px solid #196678;
+}
+#platnosc:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}

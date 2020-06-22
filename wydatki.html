@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8">
+	<title>Finanse app</title>
+	<meta name="description" content="Aplikacja która w łatwy sposó pomoże Ci na kontrolowanie Twoich przychodów jak i wydatków.">
+	<meta name="keywords" content="finanse, kasa">
+	<meta name="author" content="Rashi">
+	
+	<meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+	
+	<link rel="stylesheet" href="styl_menu.css">
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+	
+</head>
+
+<body>
+
+		<div id="container">
+			<harder>
+					<h1 class = "logo"> Dodaj wydatek </h1>
+			</harder>
+				
+					<div id="menu">
+						<nav>
+							<ol>
+								<li><a href="#">Dodaj przychód</a></li>
+								<li><a href="#">Dodaj wydatek</a></li>
+								<li><a href="#">Przeglądaj bilans</a></li>
+								<li><a href="#">Ustawienia</a></li>
+								<li><a href="#">Wyloguj się</a></li>
+							</ol>
+						</nav>
+					</div>
+			<main>
+			
+			<div class="zawartosc">
+					<article>
+					
+						 <div class="formularz">
+							
+							<form action="" method="post">
+							
+								<fieldset>
+								
+									<legend> Wydatek </legend>
+									
+											<div class="opcja"> Kwota </div>
+											<div id="kwota"><label>  <input type ="number" required placeholder="Kwota" onfocus="this.placeholder=''" onblur="this.placeholder='Kwota'" step="0.01"></label></div>
+											<div class="opcja">Data</div>
+											<div id="data"><label><input type ="date" required></label></div>
+											
+									<div class="opcja"><label for="platnosc"> Sposób płatności </label></div>
+										<select id="platnosc" name="sposob_platnosci">
+									
+											<label><option value="1" selected>Gotówka</option></label>
+											<label><option value="2">Karta debetowa</option></label>
+											<label><option value="3">Karta kredytowa</option></label>
+									
+										</select>
+									
+									
+									<div class="opcja"><label for="kategoria"> Kategoria </label></div>
+										<select id="kategoria" name="wybor">
+									
+											<label><option value="1" selected>Jedzenie</option></label>
+											<label><option value="2">Mieszkanie</option></label>
+											<label><option value="3">Transport</option></label>
+											<label><option value="4">Telekomunikacja</option><label>
+											<label><option value="5">Opieka zdrowotna</option><label>
+											<label><option value="6">Ubranie</option><label>
+											<label><option value="7">Higiena</option><label>
+											<label><option value="8">Dzieci</option><label>
+											<label><option value="9">Rozrywka</option><label>
+											<label><option value="10">Wycieczka</option><label>
+											<label><option value="11">Szkolenia</option><label>
+											<label><option value="12">Książki</option><label>
+											<label><option value="13">Oszczedności</option><label>
+											<label><option value="14">Na złotą jesień, czyli emeryturę</option><label>
+											<label><option value="15">Spłata długów</option><label>
+											<label><option value="16">Darowizna</option><label>
+											<label><option value="17">Inne wydatki</option><label>
+									
+										</select>
+									
+									<div class="Komentarz">
+										
+										<div class="opcja"><label for="komentarz">Komentarz</label></div>
+										<textarea name="komentarz" id="komentarz" rows="4" cols="80"></textarea>
+										
+									</div>
+									
+									<div class="dodaj"><input type = "submit" value="Dodaj"></div>
+									<div class="reset"><input type = "reset" value="Anuluj"></div>
+								
+								</fieldset>
+								
+								
+							</form>
+						</div>
+						
+					</article>
+			</div>
+				
+			</main>
+			<br>
+			<br>
+			<br>
+			<br>
+			
+			
+					<footer>
+							<div id ="stopka">
+								Wszelkie prawa zastrzeżone. Aplikacja w wykonaniu Rashi &copy
+							</div>
+					</footer>
+			
+		</div>
+					
+
+</body>
+</html>
