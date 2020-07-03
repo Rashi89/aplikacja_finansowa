@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/coin.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -22,23 +23,41 @@
 
 <body>
 
-		<header>
+	
+	<main>
+		
+		<div class="container">
+		
+			<header>
 				<h1 class = "logo"> Aplikacja finansowa </h1>
-		</header>
-	
-		<main>
-				<div id="container">
-					<form>
-							<h2> Logowanie i rejestracja </h2>
-							<div class="login"> <i class="icon-user-1"></i><input type ="text" placeholder="Login" onfocus="this.placeholder=''" onblur="this.placeholder='Login'"></div>
-							<div class="haslo"><i class="icon-lock"></i><input type ="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'"></div>
-							<div class="rejestracja"> <input type = "submit" value="Zaloguj się"></div>
-							<div class="rejestracja"><input type = "submit" value="Zarejestruj się"></div>
-					</form>
+			</header>
+		
+			
+				<div class="row">
+				
+						<div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 formularz text-center mt-5">
+									<form >
+											<h2> <p>Logowanie i&nbsp;rejestracja </p></h2>
+											<div class="col-1 d-inline" ><i class="icon-user-1"></i></div>
+											<div class="login d-inline"><input type ="text" placeholder="Login" onfocus="this.placeholder=''" onblur="this.placeholder='Login'"></div>
+											<div></div>
+											<div class="klodka col-1 d-inline"><i class="icon-lock"></i></div>
+											<div class="haslo d-inline"><input type ="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'"></div>
+											<div class="rejestracja"> <input type = "submit" value="Zaloguj się"></div>
+											<div class="rejestracja"><input type = "submit" value="Zarejestruj się"></div>
+									</form>
+						</div>
+						
 				</div>
+				
+		</div>
 	
-		</main>
-
+	</main>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script src="js/bootstrap.min.js"></script>
 
 
 </body>
