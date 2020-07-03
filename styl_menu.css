@@ -3,22 +3,24 @@ body
 	background-image: url("img/morocco-blue.png");
 	font-family: 'Lobster', cursive;
 	margin:0 !important;
+	position:relative;
 }
 
 .logo
 {
 	width:100%;
-}
-
-
-h1.logo
-{
-	color:#003845;
+	color:white;
 	font-size: 35px;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 8px;
-	height:25px;
+	background: rgba(0, 0, 0, 0.5);
+	margin-top:0px;
+	margin-bottom:0;
+	height:80px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
 	
 }
 
@@ -40,8 +42,8 @@ h2
 {
 	width: 100%;
 	background-color: #2c3136;
-	color: #939ca3;
-	margin-top: 20px;
+	color: red;
+	margin-top: 0px;
 	padding:10px 0;
 	text-align: center;
 	
@@ -60,7 +62,7 @@ ol
 
 ol a
 {
-	color: #196678;
+	color: #86dcf0;
 	text-decoration:none;
 	display:block;
 }
@@ -68,7 +70,7 @@ ol a
 ol > li
 {
 	float: left;
-	width:250px;
+	width:270px;
 	height:40px;
 	border-right: 1px dashed #196678;
 	
@@ -86,7 +88,7 @@ ol > li:hover
 
 ol >li:hover >a
 {
-	color:#43c3e0;
+	color:white;
 }
 
 #stopka
@@ -99,6 +101,8 @@ ol >li:hover >a
 	font-size:20px;
 	text-align: center;
 	clear:both;
+	position: fixed;
+	bottom: 0;
 }
 
 #stopka_menu
@@ -110,6 +114,8 @@ ol >li:hover >a
 	color: white;
 	font-size:20px;
 	text-align: center;
+	position: fixed;
+	bottom: 0;
 }
 
 #stopka_bilans
@@ -121,6 +127,8 @@ ol >li:hover >a
 	color: white;
 	font-size:20px;
 	text-align: center;
+	position: fixed;
+	bottom: 0;
 }
 
 .zawartosc
@@ -391,6 +399,7 @@ textarea:focus
 .zawartosc2
 {
 	margin-top:20px;
+	margin-bottom:20px;
 	margin-right:30px;
 	width:1470px;
 	height:1100px;
@@ -452,4 +461,9 @@ tr:last-child td
 {
 	margin top:15px;
 	font-size:50px;
+}
+
+#odstep
+{
+	height:100px;
 }
