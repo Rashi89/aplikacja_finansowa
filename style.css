@@ -1,7 +1,7 @@
 body
 {
 	background-image: url("img/morocco-blue.png");
-	font-family: 'Lobster', cursive;
+	font-family: 'Lobster', cursive !important;
 }
 
 h1.logo
@@ -14,7 +14,7 @@ h1.logo
 	
 }
 
-#container
+.formularz
 {
 	background-color:white;
 	width:320px;
@@ -30,7 +30,7 @@ h1.logo
 
 h2
 {
-	color:#1c525e;
+	color:#1c525e !important;
 	font-size: 25px;
 	margin-left:auto;
 	margin-right:auto;
@@ -43,7 +43,7 @@ input[type=text],
 input[type=password],
 input[type=email]
 {
-	width:270px;
+	width:260px;
 	background-color:#efefef;
 	color:#666;
 	border: 2px solid #ddd;
@@ -53,6 +53,7 @@ input[type=email]
 	box-sizing: border-box;
 	outline:none;
 	margin-top:10px;
+	margin-left:-15px;
 	
 }
 input[type=text]:focus,
@@ -79,7 +80,7 @@ input[type=email]:focus
 	cursor:pointer;
 	letter-spacing:2px;
 	outline:none;
-	margin-left:15px;
+	margin-left:5px;
 }
 
 .rejestracja input[type=submit]:focus
@@ -107,7 +108,7 @@ input[type=email]:focus
 	cursor:pointer;
 	letter-spacing:2px;
 	outline:none;
-	margin-left:15px;
+	margin-left:5px;
 }
 
 .anuluj input[type=submit]:focus
@@ -122,11 +123,6 @@ input[type=email]:focus
 	background-color:#b02a2a;
 }
 
-.login,
-.haslo
-{
-	margin-left:10px;
-}
 
 
 
