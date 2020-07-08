@@ -1,0 +1,524 @@
+body
+{
+	background-image: url("img/morocco-blue.png");
+	font-family: 'Lobster', cursive;
+	margin:0 !important;
+	position:relative;
+}
+
+.logo
+{
+	
+	color:white;
+	font-size: 35px;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	background: rgba(0, 0, 0, 0.5);
+	margin-top:0px;
+	margin-bottom:0;
+	height:80px;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	
+}
+
+h2
+{
+	font-size:60px;
+	margin-top:0;
+	margin-bottom:0;
+}
+
+.zawartosc
+{
+	margin-top:30px !Important;
+	margin-bottom:30px !Important;
+	/*width:1000px !Important;*/
+	/*height:684px !Important;*/
+	color:black;
+	font-size:30px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.formularz
+{
+	background-color:white !Important;
+	width:700px !Important;
+	padding: 10px 50px 30px 50px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:50px;
+	-webkit-box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+	box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+}
+
+legend.scheduler-border 
+{
+    width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+}
+
+fieldset
+{
+	border: 10px double #1c525e !Important;
+	background-color:white !important;
+}
+
+legend
+{
+	font-size:50px !Important;
+	color:#1c525e !Important;
+}
+
+legend:hover
+{
+	color:black !Important;
+}
+
+#komentarz
+{
+	resize:none;
+}
+
+input[type=submit],
+input[type=reset]
+{
+	width:300px;
+	background-color:#efefef;
+	color:#666;
+	border: 2px solid #ddd;
+	border-radius: 5px;
+	font-size:20px;
+	padding:10px;
+	box-sizing: border-box;
+	outline:none;
+	margin-top:10px;
+	
+}
+
+.dodaj input[type=submit]
+{
+	width: 300px;
+	background-color:#1eba5f;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+}
+
+.dodaj input[type=submit]:hover
+{
+	background-color:#1da94e;
+}
+
+.dodaj input[type=submit]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+.reset input[type=reset]
+{
+	width: 300px;
+	background-color:#e84343;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	margin-bottom:20px;
+}
+
+.reset input[type=reset]:hover
+{
+	background-color:#b02a2a;
+}
+
+.reset input[type=reset]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+.kwota,
+.data,
+.opcja_1
+{
+	margin-left:40px !Important;
+}
+
+.kwota input[type=number]
+{
+	width: 300px;
+	font-size:15px;
+	color: black;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	border: 3px solid #196678;
+	
+}
+
+.kwota input[type=number]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+
+.data input[type=date]
+{
+	width: 300px;
+	font-size:15px;
+	color: black;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	border: 3px solid #196678;
+}
+
+.data input[type=date]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+.data input[type=date]
+{
+	width: 300px;
+	font-size:15px;
+	color: black;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	border: 3px solid #196678;
+}
+
+.data input[type=date]:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+#kategoria
+{
+	width: 300px;
+	font-size:15px;
+	color: black;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	border: 3px solid #196678;
+}
+#kategoria:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+.opcja
+{
+	color:#287c8f;
+	font-size:30px !Important;
+	text-align:center !Important;
+}
+
+.opcja:hover
+{
+	color:black;
+}
+
+textarea
+{
+	border: 3px solid #196678;
+	font-size:18px !Important;
+}
+
+textarea:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+#platnosc
+{
+	width: 300px;
+	font-size:15px;
+	color: black;
+	padding: 10px 10px;
+	margin-top: 10px;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	border: 3px solid #196678;
+}
+#platnosc:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+}
+
+.napis
+{
+	margin-top:0;
+	color:#1c525e;
+	margin-bottom:10px;
+	margin-left:10px;
+}
+.bilans_opcja
+{
+	color:#287c8f;
+}
+
+.zawartosc1
+{
+	margin-top:30px !Important;
+	margin-bottom:30px !Important;
+
+	color:black;
+	font-size:30px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.zawartosc2
+{
+	margin-top:30px !Important;
+	margin-bottom:30px !Important;
+	color:black;
+	font-size:30px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color:white;
+	border-radius:5px;
+	-webkit-box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+	box-shadow: 3px 3px 30px 5px rgba(28,82,94,1);
+	padding:10px;
+}
+
+
+tr>td
+{
+	height:40px;
+	width: 300px;
+}
+
+tr:first-child td
+{
+	border-bottom: 2px dotted #444444;
+}
+
+tr:last-child td
+{
+	border-top: 2px dotted #444444;
+}
+
+.info_dla_uzytkownikow
+{
+	float:left;
+	
+}
+
+.saldo
+{
+	font-size:50px;
+}
+
+#saldo
+{
+	font-size:60px;
+}
+
+#informacja
+{
+	margin-top:15px;
+	font-size:40px;
+}
+
+#odstep
+{
+	height:100px;
+}
+
+.active
+{
+	color:black;
+}
+
+.btn-secondary
+{
+	background-color:#e84343 !Important;
+	border: solid 1px #e84343 !Important;
+}
+
+.btn-primary
+{
+	background-color:#1eba5f  !Important;
+	border: solid 1px #1eba5f !Important;
+}
+
+.btn-secondary:hover
+{
+	background-color:#b02a2a !Important;
+	border: solid 1px #b02a2a !Important;
+}
+
+.btn-primary:hover
+{
+	background-color:#1da94e  !Important;
+	border: solid 1px #1da94e  !Important;
+}
+
+h5
+{
+	color:black !Important;
+	font-size:30px !Important;
+	opacity:.7 !Important;
+}
+
+.modal-header {
+  background-image: url("img/morocco-blue.png") !Important;
+  font-size:50px !Important;
+}
+
+.modal-header button[type=button]
+{
+	font-size: 50px !Important;
+	color:black !Important;
+	opacity:.7 !Important;
+}
+
+
+@media(max-width:576px)
+{
+	.kwota input[type=number]
+	{
+		width: 250px;
+		margin-left:0px;
+	}
+	.data input[type=date]
+	{
+		width: 250px;
+		margin-left:0px;
+	}
+	.icon-list,
+	.icon-cc-visa
+	{
+		margin-left:0px;
+	}
+	.zawartosc,
+	.zawartosc1
+	{
+		margin-left:10px !Important;
+		margin-right:10px !Important;
+	}
+	.stopka_menu
+	{
+		font-size:12px !Important;
+	}
+
+}
+@media(max-width:767px)
+{
+
+	#saldo
+	{
+		font-size:30px;
+	}
+
+	#informacja
+	{
+	margin-top:15px;
+	font-size:20px;
+	}
+	legend
+	{
+		font-size:25px !Important;
+		color:#1c525e !Important;
+	}
+	.zawartosc2
+	{
+		clear:both !Important;
+		font-size:18px;
+		margin-left:5px !Important;
+		margin-right:5px !Important;
+	}
+	.logo
+	{
+		font-size: 25px !Important;
+	}
+	.bilans
+	{
+		font-size:40px !Important;
+	}
+	tr>td
+	{
+		font-size:30px !Important;
+	}
+}
+@media(min-width:768px) and (max-width:991px)
+{
+	#saldo
+	{
+		font-size:35px;
+	}
+
+	#informacja
+	{
+	margin-top:15px;
+	font-size:30px;
+	}
+	
+	legend
+	{
+		font-size:35px !Important;
+		color:#1c525e !Important;
+	}
+	.bilans
+	{
+		font-size:45px !Important;
+	}
+		tr>td
+	{
+		font-size:30px !Important;
+	}
+	
+}
