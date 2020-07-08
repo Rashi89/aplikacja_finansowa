@@ -10,9 +10,11 @@
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	
-	<link rel="stylesheet" href="styl_menu.css">
+	<link rel="stylesheet" href="styl_przychod.css">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/coin.css">
+	<link rel="stylesheet" href="menu.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -22,72 +24,135 @@
 
 <body>
 
-		<div id="container">
-			<header>
-					<h1 class = "logo"> Przeglądaj Bilans</h1>
-			</header>
-				
-					<div id="menu">
-						<nav>
-							<ol>
-								<li><a href="#"><i class="icon-credit-card"></i>Dodaj przychód</a></li>
-								<li><a href="#"><i class="icon-basket"></i>Dodaj wydatek</a></li>
-								<li><a href="#"><i class="icon-chart-bar"></i>Przeglądaj bilans</a></li>
-								<li><a href="#"><i class="icon-cog-alt"></i>Ustawienia</a></li>
-								<li><a href="#"><i class="icon-logout"></i>Wyloguj się</a></li>
-							</ol>
-						</nav>
-					</div>
-			<main>
+
+		<div class="container-fluid p-0">
 			
-			<div class="zawartosc1">
-					
-					
-						 <div class="formularz">
-							
-							<form action="" method="post">
-							
-								<fieldset>
-								
-									<legend>Bilans</legend>
-												
-											<article>
-												<h3 class="napis">Wybierz interesujący Cię okres czasu z jakiego chcesz przejrzeć swój bilans</h3>
-											</article>
-											
-											<div class="bilans_opcja"><label><input type="radio"  name="opcja_bilansu" value="1" checked> Bieżący miesiąc </label></div>
-											<div class="bilans_opcja"><label><input type="radio"  name="opcja_bilansu" value="2" > Poprzedni miesiąc </label></div>
-											<div class="bilans_opcja"><label><input type="radio"  name="opcja_bilansu" value="3" > Bieżący rok </label></div>
-											<div class="bilans_opcja"><label><input type="radio"  name="opcja_bilansu" value="4" > Niestandardowy </label></div>
-											
-												<div class="opcja">Data początkowa</div>
-												<div class="data"><i class="icon-calendar"></i><label><input type="date"></label></div>
-												<div class="opcja">Data końcowa</div>
-												<div class="data"><i class="icon-calendar"></i><label><input type="date"></label></div>
-											
-									<div class="dodaj"><input type = "submit" value="OK"></div>
-									<div class="reset"><input type = "reset" value="Anuluj"></div>
-										
-								</fieldset>
-								
-								
-							</form>
-						</div>
-						<div id="odstep"></div>
-						
-					
-			</div>
-				
-			</main>
-			
-					<footer>
-							<div id ="stopka">
-								Wszelkie prawa zastrzeżone. Aplikacja w wykonaniu Rashi &copy;
-							</div>
-					</footer>
+							<div class = "logo"> <p>Aplikacja Finansowa</p></div>
 			
 		</div>
-					
+		
+			<header>	
+					<nav class="navbar navbar-dark bg-menu navbar-expand-xl">
+								
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
+										<span class="navbar-toggler-icon"></span>
+									</button>
+								
+									<div class="collapse navbar-collapse" id="mainmenu">
+									
+										<ul class="navbar-nav mr-auto">
+										
+											<li class="nav-item ">
+												<a class="nav-link color-text active" href="#"><i class="icon-credit-card"></i> Dodaj przychód </a>
+											</li>
+											
+											<li class="nav-item">
+												<a class="nav-link color-text" href="#"><i class="icon-basket"></i> Dodaj wydatek </a>
+											</li>
+											
+											<li class="nav-item">
+												<a class="nav-link color-text" href="#"><i class="icon-chart-bar"></i> Przeglądaj bilans </a>
+											</li>
+											
+											<li class="nav-item">
+												<a class="nav-link color-text" href="#"> <i class="icon-cog-alt"></i> Ustawienia </a>
+											</li>
+											
+											<li class="nav-item">
+												<a class="nav-link color-text" href="#"> <i class="icon-logout"></i> Wyloguj się </a>
+											</li>
+										
+										</ul>
+									
+									</div>
+		
+					</nav>
+
+			</header>
+			
+	<main>
+	
+			<div class="container">
+				<div class="row">
+							<div class="zawartosc1 formularz">
+							
+								<form action="" method="post">
+								
+										<fieldset class="scheduler-border">
+											
+											<legend class="scheduler-border"> Bilans </legend>
+											
+													<article>
+														<h3 class="napis">Wybierz interesujący Cię okres czasu z jakiego chcesz przejrzeć swój bilans</h3>
+													</article>
+												
+												<div >
+														
+														<div class="bilans_opcja"><label><input type="radio"  name="opcja_bilansu" value="1" checked> Bieżący miesiąc </label></div>
+														<div class="bilans_opcja"><label><input type="radio"  name="opcja_bilansu" value="2" > Poprzedni miesiąc </label></div>
+														<div class="bilans_opcja"><label><input type="radio"  name="opcja_bilansu" value="3" > Bieżący rok </label></div>
+														<div class="bilans_opcja"><label><input type="radio"  name="opcja_bilansu" value="4" class="btn btn-primary" data-toggle="modal" data-target="#daty" > Niestandardowy </label></div>
+														
+												</div>
+											
+												<div class="dodaj"><input type = "submit" value="OK"></div>
+												<div class="reset"><input type = "reset" value="Anuluj"></div>	
+
+				<!-- Modal -->
+												<div class="modal fade" id="daty" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+													<div class="modal-dialog modal-dialog-centered" role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title" id="exampleModalLongTitle">Ustawienie dat</h5>
+																<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																  <span aria-hidden="true">&times;</span>
+																</button>
+															</div>
+															<div class="modal-body text-center">
+										
+																		<div class="opcja">Data początkowa</div>
+																		<div class="data text-center"><i class="icon-calendar"></i><label><input type="date"></label></div>
+																		<div class="opcja">Data końcowa</div>
+																		<div class="data text-center"><i class="icon-calendar"></i><label><input type="date"></label></div>
+															</div>
+															<div class="modal-footer">
+																<button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+																<button type="submit" class="btn btn-primary">Zapisz</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											
+												
+										
+										</fieldset>
+								
+								</form>
+							
+							</div>
+				</div>
+
+
+
+				
+		</div>
+		
+
+				
+	</main>
+		
+			<div class="container-fluid p-0 mt-4">
+				<footer class="page-footer font-small blue fixed-bottom">
+							<div class="stopka_menu">
+							 <p>Rashi Lavi na prezydenta Polszy! Wszelkie prawa zastrzeżone. Aplikacja w wykonaniu Rashi &copy;</p>
+							</div>
+				</footer>
+			</div>	
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+		<script src="js/bootstrap.min.js"></script>				
 
 </body>
 </html>
