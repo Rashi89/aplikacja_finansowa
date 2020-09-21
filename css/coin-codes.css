@@ -9,6 +9,16 @@
 .icon-list:before { content: '\e807'; } /* '' */
 .icon-user-1:before { content: '\e808'; } /* '' */
 .icon-lock:before { content: '\e809'; } /* '' */
+.icon-attention-2:before { content: '\e80a'; } /* '' */
+.icon-attention-circled:before { content: '\e80b'; } /* '' */
+.icon-attention-1:before { content: '\e80c'; } /* '' */
+.icon-alert:before { content: '\e80d'; } /* '' */
+.icon-warning-empty:before { content: '\e80e'; } /* '' */
+.icon-warning:before { content: '\e80f'; } /* '' */
+.icon-attention:before { content: '\e810'; } /* '' */
+.icon-warning-1:before { content: '\e811'; } /* '' */
+.icon-exclamation:before { content: '\e812'; } /* '' */
+.icon-attention-3:before { content: '\e813'; } /* '' */
 .icon-logout:before { content: '\f02d'; } /* '' */
 .icon-money:before { content: '\f0d6'; } /* '' */
 .icon-mail-alt:before { content: '\f0e0'; } /* '' */

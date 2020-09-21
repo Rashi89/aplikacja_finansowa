@@ -89,6 +89,66 @@
       "css": "mail-alt",
       "code": 61664,
       "src": "fontawesome"
+    },
+    {
+      "uid": "c76b7947c957c9b78b11741173c8349b",
+      "css": "attention-2",
+      "code": 59402,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "b035c28eba2b35c6ffe92aee8b0df507",
+      "css": "attention-circled",
+      "code": 59403,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "97902f87200ce74d181044df02a0458d",
+      "css": "attention-1",
+      "code": 59404,
+      "src": "entypo"
+    },
+    {
+      "uid": "39a5a0d7ce8342d149373b2ce219503a",
+      "css": "alert",
+      "code": 59405,
+      "src": "entypo"
+    },
+    {
+      "uid": "8f28d948aa6379b1a69d2a090e7531d4",
+      "css": "warning-empty",
+      "code": 59406,
+      "src": "typicons"
+    },
+    {
+      "uid": "dd4b00255957a608953c409346e7d7fb",
+      "css": "warning",
+      "code": 59407,
+      "src": "typicons"
+    },
+    {
+      "uid": "f47srtt9pew19q6kg9jniwtzsb8q1rhy",
+      "css": "attention",
+      "code": 59408,
+      "src": "modernpics"
+    },
+    {
+      "uid": "3fe5b810589a16bc691e3e979b2789dc",
+      "css": "warning-1",
+      "code": 59409,
+      "src": "elusive"
+    },
+    {
+      "uid": "711fdb6caa365d5b69d4a72da2009cf6",
+      "css": "exclamation",
+      "code": 59410,
+      "src": "elusive"
+    },
+    {
+      "uid": "97ac1a82370ae58f02e4ff1bdc58ee86",
+      "css": "attention-3",
+      "code": 59411,
+      "src": "websymbols"
     }
   ]
 }

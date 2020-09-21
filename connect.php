@@ -3,6 +3,6 @@
 	$host = "localhost";
 	$db_user = "root";
 	$db_password = "";
-	$db_name = "projekt_bazy_danych";
+	$db_name = "zabawa";
 
 ?>

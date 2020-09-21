@@ -20,11 +20,12 @@
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	
-	<link rel="stylesheet" href="styl_przychod.css">
+	<link rel="stylesheet" href="styl_tabel.css">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/coin.css">
 	<link rel="stylesheet" href="menu.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
 	
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -41,41 +42,7 @@
 		</div>
 		
 			<header>	
-					<nav class="navbar navbar-dark bg-menu navbar-expand-xl">
-								
-									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Przełącznik nawigacji">
-										<span class="navbar-toggler-icon"></span>
-									</button>
-								
-									<div class="collapse navbar-collapse" id="mainmenu">
-									
-										<ul class="navbar-nav mr-auto">
-										
-											<li class="nav-item ">
-												<a class="nav-link color-text active" href="przychod.php"><i class="icon-credit-card"></i> Dodaj przychód </a>
-											</li>
-											
-											<li class="nav-item">
-												<a class="nav-link color-text" href="wydatek.php"><i class="icon-basket"></i> Dodaj wydatek </a>
-											</li>
-											
-											<li class="nav-item">
-												<a class="nav-link color-text" href="bilans_wybor.php"><i class="icon-chart-bar"></i> Przeglądaj bilans </a>
-											</li>
-											
-											<li class="nav-item">
-												<a class="nav-link color-text" href="#"> <i class="icon-cog-alt"></i> Ustawienia </a>
-											</li>
-											
-											<li class="nav-item">
-												<a class="nav-link color-text" href="logout.php"> <i class="icon-logout"></i> Wyloguj się </a>
-											</li>
-										
-										</ul>
-									
-									</div>
-		
-					</nav>
+				<?php include 'menu.html'; ?>
 
 			</header>
 	<main>
@@ -125,14 +92,58 @@
 												
 														<div class="opcja"><label for="kategoria"> Kategoria </label></div>
 															<i class="icon-list"></i>
-																<select class="opcja_1 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">
 															
-																	<option value="Salary" selected>Wynagrodzenie</option>
-																	<option value="Interest">Odsetki bankowe</option>
-																	<option value="Allegro">Sprzedaż na allegro</option>
-																	<option value="Another">Inne</option>
-									
-																</select>
+															<?php
+																$user_id=$_SESSION['id'];
+																
+																require_once "connect.php";
+																mysqli_report(MYSQLI_REPORT_STRICT);
+															
+																try
+																{
+																	$polaczenie = new mysqli($host, $db_user, $db_password, $db_name);
+					
+																		if($polaczenie->connect_errno!=0)
+																		{
+																			//rzuć nowym wyjątkiem
+																			throw new Exception(mysqli_connect_errno());
+																		}
+																		else{
+																			
+																			$rezultat=$polaczenie->query("SELECT name FROM `incomes_category_assigned_to_users` WHERE user_id='$user_id' GROUP BY name");
+																			if(!$rezultat)throw new Exception($polaczenie->error);
+																			$ile_wynikow=$rezultat->num_rows;
+
+																			if($ile_wynikow>0)
+																			{
+																				$i=0;
+																				while($row = $rezultat->fetch_assoc()){
+																						$nazwa[$i]=$row['name'];
+																						$i++;
+																				}
+																				echo '<select class="opcja_1 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">';
+																				for($i=0;$i<$ile_wynikow;$i++)
+																				{
+																					echo '<option value="'.$nazwa[$i].'">'.$nazwa[$i].'</option>';
+																				}
+																				echo '</select>';
+																			}
+																			else
+																			{
+																				echo '<span style="color:red";>Dodaj w ustawieniach kategorię przychodu!</span>';;
+																			}
+																		}
+																		$polaczenie->close();	
+																}
+																catch(Exception $e)
+																{
+																	echo '<span style="color:red";>Błąd serwera! Przepraszamy za niedogodności!</span>';
+																	echo '<br/> Informacja developerska: '.$e;
+																}
+															?>
+															
+															
+
 													
 												</div>
 												
@@ -149,7 +160,7 @@
 												</div>
 											
 												<div class="dodaj"><input type = "submit" value="Dodaj"></div>
-												<div class="reset"><input type = "reset" value="Anuluj"></div>		
+												<a href="witaj.php" class="reset">Anuluj</a>
 											
 												
 										
@@ -180,7 +191,8 @@
 	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	
-		<script src="js/bootstrap.min.js"></script>				
+		<script src="js/bootstrap.min.js"></script>
+		<script src="submenu.js"></script>		
 
 </body>
 </html>

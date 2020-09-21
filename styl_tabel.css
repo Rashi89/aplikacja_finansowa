@@ -31,6 +31,14 @@ h2
 	margin-bottom:0;
 }
 
+.wykres
+{
+	margin-top:30px;
+	font-size:35px;
+    text-align:center;
+}
+
+
 .zawartosc
 {
 	margin-top:30px !Important;
@@ -129,7 +137,7 @@ input[type=reset]
 	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
 }
 
-.reset input[type=reset]
+.reset
 {
 	width: 300px;
 	background-color:#e84343;
@@ -143,18 +151,55 @@ input[type=reset]
 	letter-spacing:2px;
 	outline:none;
 	margin-bottom:20px;
+	-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
 }
 
-.reset input[type=reset]:hover
+.reset:hover
 {
 	background-color:#b02a2a;
+	text-decoration: none;
 }
 
-.reset input[type=reset]:focus
+.reset:focus
 {
 	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
 	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
 	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	text-decoration: none;
+}
+.akcept
+{
+	width: 300px;
+	background-color:#1eba5f;
+	font-size:20px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	border: none;
+	border-radius:5px;
+	cursor:pointer;
+	letter-spacing:2px;
+	outline:none;
+	margin-bottom:10px;
+	-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+}
+
+.akcept:hover
+{
+	background-color:#1da94e;
+	text-decoration: none;
+}
+
+.akcept:focus
+{
+	-webkit-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	-moz-box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	box-shadow: 0px 0px 15px 5px rgba(28,82,94,1);
+	text-decoration: none;
 }
 
 .kwota,
@@ -231,7 +276,7 @@ input[type=reset]
 
 #kategoria
 {
-	width: 300px;
+	width: 250px;
 	font-size:15px;
 	color: black;
 	padding: 10px 10px;
@@ -356,6 +401,11 @@ tr:last-child td
 	float:left;
 	
 }
+.info_dla_uzytkownika
+{
+	margin-left:auto;
+	margin-right:auto;
+}
 
 .saldo
 {
@@ -370,7 +420,8 @@ tr:last-child td
 #informacja
 {
 	margin-top:15px;
-	font-size:40px;
+	font-size:35px;
+	padding:10px;
 }
 
 #odstep
@@ -411,12 +462,12 @@ h5
 {
 	color:black !Important;
 	font-size:30px !Important;
-	opacity:.7 !Important;
 }
 
 .modal-header {
   background-image: url("img/morocco-blue.png") !Important;
-  font-size:50px !Important;
+  font-size:25px !Important;
+  opacity:0.9 !Important;
 }
 
 .modal-header button[type=button]
@@ -426,9 +477,34 @@ h5
 	opacity:.7 !Important;
 }
 
+.zakres
+{
+	font-size:45px;
+	color:red;
+}
+
+.square
+{
+	height:20px;
+	width:20px;
+
+}
+.legenda_koloru
+{
+	margin-bottom: 10px;
+}
+.legenda_koloru:hover
+{
+	color:#287c8f;
+}
 
 @media(max-width:576px)
 {
+	.square
+	{
+	height:10px;
+	width:10px;
+	}
 	.kwota input[type=number]
 	{
 		width: 250px;
@@ -454,11 +530,19 @@ h5
 	{
 		font-size:12px !Important;
 	}
+	.zakres
+	{
+		font-size:20px !Important;
+	}
 
 }
 @media(max-width:767px)
 {
-
+	.square
+	{
+	height:15px;
+	width:15px;
+	}
 	#saldo
 	{
 		font-size:30px;
@@ -493,6 +577,11 @@ h5
 	{
 		font-size:30px !Important;
 	}
+	.zakres
+	{
+		font-size:20px !Important;
+	}
+
 }
 @media(min-width:768px) and (max-width:991px)
 {
@@ -520,5 +609,10 @@ h5
 	{
 		font-size:30px !Important;
 	}
+		.zakres
+	{
+		font-size:28px !Important;
+	}
 	
 }
+
