@@ -67,10 +67,31 @@
 					echo 'blad';
 				}
 				
+				$empty=$polaczenie->query("SELECT COUNT(*) FROM incomes");
+				if(!$empty)throw new Exception($polaczenie->error);
+				$rows = $empty->fetch_assoc();
+				$czy_pusta=$rows['COUNT(*)'];
+				if($czy_pusta==0)
+				{
+					$max_id=1;
+				}
+				else
+				{
+				$zapytanie=$polaczenie->query("SELECT MAX(id) FROM incomes");
+				if(!$zapytanie)throw new Exception($polaczenie->error);
+				$ile=$zapytanie->num_rows;
+				
+				if($ile>0)
+				{
+				$row = $zapytanie->fetch_assoc();
+				$max_id=$row['MAX(id)']+1;
+				}
+				}
+				
 				if($all_ok==true)
 				{
 					//Wszystkie testy zaliczone dodajemy osobe do bazy
-					if($polaczenie->query("INSERT INTO incomes VALUES (NULL,'$user_id','$id_incomes','$kwota','$data','$comment')"))
+					if($polaczenie->query("INSERT INTO incomes VALUES ('$max_id','$user_id','$id_incomes','$kwota','$data','$comment')"))
 						{
 							$_SESSION['addIncome']=true;
 							header('Location: przychod.php');

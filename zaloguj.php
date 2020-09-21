@@ -2,7 +2,7 @@
 
 	session_start();
 	
-		if ((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
+	if ((!isset($_POST['login'])) || (!isset($_POST['haslo'])))
 	{
 		header('Location: logowanie.php');
 		exit();
@@ -25,7 +25,7 @@
 		$haslo = htmlentities($haslo, ENT_QUOTES, "UTF-8");
 		
 		if ($rezultat = @$polaczenie->query(
-		sprintf("SELECT * FROM users WHERE username='%s' AND password='%s'",
+		sprintf("SELECT * FROM users WHERE BINARY username='%s' AND BINARY password='%s'",
 		mysqli_real_escape_string($polaczenie,$login),
 		mysqli_real_escape_string($polaczenie,$haslo))))
 		{
@@ -43,7 +43,7 @@
 				
 				unset($_SESSION['blad']);
 				$rezultat->free_result();
-				header('Location: bilans_tabela.php'); //to trzeba zmienic na strone powitalna!
+				header('Location: witaj.php'); //to trzeba zmienic na strone powitalna!
 				
 			}
 			else
