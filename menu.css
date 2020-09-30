@@ -140,7 +140,14 @@ ul > li
   margin-left: .1rem;
   margin-right: .1rem;
 }
-
+.sticky
+{
+	width:100%;
+	position: fixed;
+	left:0;
+	top:0;
+	z-index:100;
+}
 .dropdown-submenu > a:focus, .dropdown-submenu > a:hover, .dropdown-submenu:focus>a, r, .dropdown-submenu:hover>a,
 .dropdown-menu > li a:hover,
 .dropdown-menu > li a:focus { background-color:#394754 !Important; background-image: none; filter: none; text-decoration: none; border: none; }

@@ -6,6 +6,7 @@
 		header('Location: logowanie.php');
 		exit();
 	}
+	$username=$_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -24,6 +25,8 @@
 	<link rel="stylesheet" href="css/coin.css">
 	<link rel="stylesheet" href="menu.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="zegar.css">
+	<link rel="stylesheet" href="witaj.css">
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
@@ -32,20 +35,20 @@
 
 <body>
 
-		<div class="container-fluid p-0">
-			
-							<div class = "logo"> <p>Aplikacja Finansowa</p></div>
-			
-		</div>
+		<?php include 'belka.php'; ?>
 		
 			<header>	
+					<div class="nawigacja">
 					<?php include 'menu.html'; ?>
-
+					</div>
 			</header>
 	<main>
 		<div class="container">
-				<div class="row">
-							<div class="zawartosc formularz">
+				<div class="row no-gutter ">
+					<div class="order-12 order-lg-1 col-lg-4 my-auto p-0 d-none d-lg-block">
+						<div class="picture" id="picture"><img src="img/wydatek.png" class="obraz  mt-1"></div>
+					</div>
+							<div class="col-lg-8 order-1 order-lg-12  zawartosc formularz" style="position: relative; z-index: 2;">
 							
 								<form action="dodaj_wydatek.php" method="post">
 								
@@ -170,7 +173,7 @@
 																						$nazwa[$i]=$row['name'];
 																						$i++;
 																				}
-																				echo '<select class="opcja_1 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">';
+																				echo '<select class="opcja_2 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">';
 																				for($i=0;$i<$ile_wynikow;$i++)
 																				{
 																					echo '<option value="'.$nazwa[$i].'">'.$nazwa[$i].'</option>';
@@ -238,6 +241,8 @@
 	
 		<script src="js/bootstrap.min.js"></script>
 		<script src="submenu.js"></script>
+		<script type="text/javascript" src="zegarek.js"></script>
+		<script type="text/javascript" src="sticky-menu.js"></script>	
 					
 
 </body>

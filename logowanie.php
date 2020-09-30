@@ -43,16 +43,17 @@
 			</header>
 		
 			
-					<div class="row justify-content-around">
+				<div class="row">
 				
-						<div class="col-md-4">
+						<div class="col-sm-12 col-lg-5">
 							<img src="img/logo.png" class="logotyp" />
 						</div>
 				
 				
-						<div class="col-sm-10 col-md-8 col-lg-7 formularz text-left mt-5">
+						<div class="col-sm-12 col-lg-7 formularz text-left mt-5">
+								<div class="row">
 									<form action="zaloguj.php" method="post">
-											<h2 class="napis"> LOGOWANIE I REJESTRACJA</h2>
+											<div class="napis">LOGOWANIE I REJESTRACJA</div>
 											<div class="col-1 d-inline" ><i class="icon-user-1"></i></div>
 											<div class="login d-inline"><input type ="text" placeholder="Login" onfocus="this.placeholder=''" onblur="this.placeholder='Login'" name="login"></div>
 											<div></div>
@@ -73,6 +74,7 @@
 											
 											<a href="rejestracja.php" class="inpRejestracja">Zarejestruj się!!</a>	
 									</form>	 
+								</div>
 						</div>					
 				</div>
 		</div>

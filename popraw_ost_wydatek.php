@@ -6,8 +6,8 @@
 		header('Location: logowanie.php');
 		exit();
 	}
-		$user_id=$_SESSION['id'];
-																
+	$user_id=$_SESSION['id'];
+	$username=$_SESSION['username'];																		
 	require_once "connect.php";
 	mysqli_report(MYSQLI_REPORT_STRICT);
 															
@@ -80,6 +80,9 @@
 	<link rel="stylesheet" href="css/coin.css">
 	<link rel="stylesheet" href="menu.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="zegar.css">
+	<link rel="stylesheet" href="witaj.css">
+
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
@@ -87,23 +90,19 @@
 </head>
 
 <body>
-
-		<div class="container-fluid p-0">
-			
-							<div class = "logo"> <p>Aplikacja Finansowa</p></div>
-			
-		</div>
+		<?php include 'belka.php'; ?>
 		
 			<header>	
+					<div class="nawigacja">
 					<?php include 'menu.html'; ?>
-
+					</div>
 			</header>
 	<main>
 		<div class="container">
 				<div class="row">
 							<div class="zawartosc formularz">
 							
-								<form action="#" method="post">
+								<form action="popraw_wydatek_mechanika.php" method="post">
 								
 										<fieldset class="scheduler-border">
 											
@@ -226,7 +225,7 @@
 																						$nazwa[$i]=$row['name'];
 																						$i++;
 																				}
-																				echo '<select class="opcja_1 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">';
+																				echo '<select class="opcja_2 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">';
 																				for($i=0;$i<$ile_wynikow;$i++)
 																				{
 																					echo '<option value="'.$nazwa[$i].'">'.$nazwa[$i].'</option>';
@@ -260,11 +259,41 @@
 							
 
 												</div>
+												<div class="error">
+														<?php
+															if(isset($_SESSION['error_edit']))
+															{
+															echo $_SESSION['error_edit'];
+															unset($_SESSION['error_edit']);
+															}
+														?>
+												</div>
 											
-												<div class="dodaj"><input type = "submit" value="Dodaj"></div>
-												<a href="witaj.php" class="reset">Anuluj</a>
+												<div><a href="#" class="akcept" data-toggle="modal" data-target="#akcept">Popraw</a></div>
+												<div><a href="witaj.php" class="reset">Anuluj</a></div>
 														
-											
+<!-- The Modal -->
+												<div class="modal fade" id="akcept" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+													<div class="modal-dialog modal-dialog-centered" role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title" id="exampleModalCenterTitle"><i class="icon-warning"></i>Uwaga!</h5>
+																<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																  <span aria-hidden="true">&times;</span>
+																</button>
+															</div>
+															<div class="modal-body text-center">
+										
+																	<h4>Jesteś pewny, że chcesz wprawadzić zmiany?</h4>
+																		
+															</div>
+															<div class="modal-footer">
+																<button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+																<button type="submit" class="btn btn-primary">Tak</button>
+															</div>
+														</div>
+													</div>
+												</div>											
 												
 										
 										</fieldset>
@@ -290,7 +319,8 @@
 	
 		<script src="js/bootstrap.min.js"></script>
 		<script src="submenu.js"></script>
-					
+		<script type="text/javascript" src="zegarek.js"></script>
+		<script type="text/javascript" src="sticky-menu.js"></script>					
 
 </body>
 </html>

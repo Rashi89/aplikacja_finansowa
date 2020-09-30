@@ -1,5 +1,11 @@
 <?php
 		session_start();
+			if(!isset($_SESSION['zalogowany']))
+	{
+		header('Location: logowanie.php');
+		exit();
+	}
+	$username=$_SESSION['username'];
 ?>
 <!DOCTYPE html>
 <html lang="pl">
@@ -18,6 +24,8 @@
 	<link rel="stylesheet" href="css/coin.css">
 	<link rel="stylesheet" href="menu.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="zegar.css">
+	<link rel="stylesheet" href="witaj.css">
 	
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -28,15 +36,12 @@
 <body>
 
 
-		<div class="container-fluid p-0">
-			
-							<div class = "logo"> <p>Aplikacja Finansowa</p></div>
-			
-		</div>
+		<?php include 'belka.php'; ?>
 		
 			<header>	
-				<?php include 'menu.html'; ?>
-
+					<div class="nawigacja">
+					<?php include 'menu.html'; ?>
+					</div>
 			</header>
 			
 	<main>
@@ -75,9 +80,8 @@
 											
 												<div class="dodaj"><input type = "submit" value="OK"></div>
 												<a href="witaj.php" class="reset">Anuluj</a>
-
-				<!-- Modal -->
-												<div class="modal fade" id="daty" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+												
+												<div class="modal fade" id="daty" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true"data-backdrop="static">
 													<div class="modal-dialog modal-dialog-centered" role="document">
 														<div class="modal-content">
 															<div class="modal-header">
@@ -100,11 +104,11 @@
 														</div>
 													</div>
 												</div>
-											
-												
-										
+											</div>
+
 										</fieldset>
-								
+												<!-- Modal -->
+												
 								</form>
 							
 							</div>
@@ -132,5 +136,6 @@
 	
 		<script src="js/bootstrap.min.js"></script>				
 		<script src="submenu.js"></script>
+		<script type="text/javascript" src="zegarek.js"></script>		
 </body>
 </html>

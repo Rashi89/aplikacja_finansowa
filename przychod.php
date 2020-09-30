@@ -6,6 +6,7 @@
 		header('Location: logowanie.php');
 		exit();
 	}
+	$username=$_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +26,8 @@
 	<link rel="stylesheet" href="css/coin.css">
 	<link rel="stylesheet" href="menu.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="zegar.css">
+	<link rel="stylesheet" href="witaj.css">
 	
 	
 	<!--[if lt IE 9]>
@@ -35,20 +38,20 @@
 
 <body>
 
-		<div class="container-fluid p-0">
-			
-							<div class = "logo"> <p>Aplikacja Finansowa</p></div>
-			
-		</div>
+		<?php include 'belka.php'; ?>
 		
 			<header>	
-				<?php include 'menu.html'; ?>
-
+					<div class="nawigacja">
+					<?php include 'menu.html'; ?>
+					</div>
 			</header>
 	<main>
 		<div class="container">
-				<div class="row">
-							<div class="zawartosc formularz">
+				<div class="row no-gutter">
+					<div class="order-12 order-lg-1 col-lg-4 my-auto p-0 d-none d-lg-block">
+						<div class="picture" id="picture"><img src="img/przychod.png" class="obraz  mt-1"></div>
+					</div>
+							<div class="col-lg-8 order-1 order-lg-12  zawartosc formularz" style="position: relative; z-index: 2;">
 							
 								<form action="dodaj_przychod.php" method="post">
 								
@@ -121,7 +124,7 @@
 																						$nazwa[$i]=$row['name'];
 																						$i++;
 																				}
-																				echo '<select class="opcja_1 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">';
+																				echo '<select class="opcja_2 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">';
 																				for($i=0;$i<$ile_wynikow;$i++)
 																				{
 																					echo '<option value="'.$nazwa[$i].'">'.$nazwa[$i].'</option>';
@@ -186,13 +189,16 @@
 							 <p>Rashi Lavi na prezydenta Polszy! Wszelkie prawa zastrzeżone. Aplikacja w wykonaniu Rashi &copy;</p>
 							</div>
 				</footer>
-			</div>	
+			</div>
+			
+		<script src="jquery-3.5.1.min.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	
 		<script src="js/bootstrap.min.js"></script>
-		<script src="submenu.js"></script>		
-
+		<script src="submenu.js"></script>
+		<script type="text/javascript" src="zegarek.js"></script>
+		<script src="sticky-menu.js"></script>		
 </body>
 </html>

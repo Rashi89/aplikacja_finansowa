@@ -8,7 +8,7 @@
 	}
 	
 	$user_id=$_SESSION['id'];
-																
+	$username=$_SESSION['username'];																		
 	require_once "connect.php";
 	mysqli_report(MYSQLI_REPORT_STRICT);
 															
@@ -87,6 +87,9 @@
 	<link rel="stylesheet" href="menu.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="modal.css">
+	<link rel="stylesheet" href="zegar.css">
+	<link rel="stylesheet" href="witaj.css">
+
 
 	
 	<!--[if lt IE 9]>
@@ -98,19 +101,12 @@
 <body>
 		
 
-				<div class="container-fluid p-0">
-				
-						
-							 <div class = "logo">  
-									Witaj Agata
-							 </div>
-						
-			
-				</div>
+		<?php include 'belka.php'; ?>
 		
-					<header>	
-						<?php include 'menu.html'; ?>
-
+					<header>
+					<div class="nawigacja">
+					<?php include 'menu.html'; ?>
+					</div>
 					</header>
 					
 			<main>
@@ -194,7 +190,7 @@
 																						$nazwa[$i]=$row['name'];
 																						$i++;
 																				}
-																				echo '<select class="opcja_1 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">';
+																				echo '<select class="opcja_2 col-8 col-sm-12 col-md-12 col-lg-12" id="kategoria" name="wybor">';
 																				
 																				for($i=0;$i<$ile_wynikow;$i++)
 																				{
@@ -242,8 +238,8 @@
 														?>
 												</div>
 											
-												<a href="#" class="akcept" data-toggle="modal" data-target="#akcept">Popraw</a>
-												<a href="witaj.php" class="reset">Anuluj</a>
+												<div><a href="#" class="akcept" data-toggle="modal" data-target="#akcept">Popraw</a></div>
+												<div><a href="witaj.php" class="reset">Anuluj</a></div>
 
 <!-- The Modal -->
 												<div class="modal fade" id="akcept" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-keyboard="false" data-backdrop="static">
@@ -293,6 +289,7 @@
 	
 		<script src="js/bootstrap.min.js"></script>
 		<script src="submenu.js"></script>				
-
+		<script type="text/javascript" src="zegarek.js"></script>
+		<script type="text/javascript" src="sticky-menu.js"></script>
 </body>
 </html>

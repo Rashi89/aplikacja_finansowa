@@ -31,3 +31,10 @@
 	text-decoration: none;
 	background-color:#117fb4;
 }
+@media(max-width:576px)
+{
+.inpRejestracja
+{
+	width: 260px;
+}
+}
