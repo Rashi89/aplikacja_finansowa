@@ -7,6 +7,7 @@
 		exit();
 	}
 	$suma_przych=$_SESSION['suma_przychodow'];
+	$username=$_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +28,8 @@
 	<link rel="stylesheet" href="menu.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="dist/chartist.min.css">
+	<link rel="stylesheet" href="zegar.css">
+	<link rel="stylesheet" href="witaj.css">
 	
 
 	
@@ -41,21 +44,12 @@
 <body>
 		
 
-				<div class="container-fluid p-0">
-				
-						
-							 <div class = "logo">  
-							 <?php
-							 echo "<p>Witaj ". $_SESSION['username']."</p>";
-							 ?>
-							 </div>
-						
-			
-				</div>
+				<?php include 'belka.php'; ?>
 		
 					<header>	
-						<?php include 'menu.html'; ?>
-
+					<div class="nawigacja">
+					<?php include 'menu.html'; ?>
+					</div>
 					</header>
 					
 			<main>
@@ -208,6 +202,7 @@
 	
 		<script src="js/bootstrap.min.js"></script>
 		<script src="submenu.js"></script>		
+		<script type="text/javascript" src="zegarek.js"></script>	
 		<script src="dist/chartist.min.js"></script>
 		<script>
 		
@@ -227,6 +222,6 @@
 });
 
 		</script>
-
+		<script type="text/javascript" src="sticky-menu.js"></script>
 </body>
 </html>

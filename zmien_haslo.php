@@ -6,7 +6,7 @@
 		header('Location: logowanie.php');
 		exit();
 	}
-		
+	$username=$_SESSION['username'];				
 ?>
 
 <!DOCTYPE html>
@@ -21,12 +21,13 @@
 	
 	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
 	
-	<link rel="stylesheet" href="rejestracja.css">
 	<link rel="stylesheet" href="styl_tabel.css">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/coin.css">
 	<link rel="stylesheet" href="menu.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="zegar.css">
+	<link rel="stylesheet" href="witaj.css">
 	
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -36,20 +37,12 @@
 
 <body>
 		
-
-				<div class="container-fluid p-0">
-				
-						
-							 <div class = "logo">  
-									Witaj Agata
-							 </div>
-						
-			
-				</div>
+<?php include 'belka.php'; ?>
 		
 					<header>	
-						<?php include 'menu.html'; ?>
-
+					<div class="nawigacja">
+					<?php include 'menu.html'; ?>
+					</div>
 					</header>
 					
 			<main>
@@ -114,6 +107,7 @@
 	
 		<script src="js/bootstrap.min.js"></script>
 		<script src="submenu.js"></script>			
-
+		<script type="text/javascript" src="zegarek.js"></script>
+		<script type="text/javascript" src="sticky-menu.js"></script>
 </body>
 </html>

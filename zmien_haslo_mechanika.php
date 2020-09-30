@@ -5,27 +5,29 @@
 	{
 		$wszystko_OK=true;
 		$new_password=$_POST['new_password'];
-		$new_password = htmlentities($new_password, ENT_QUOTES, "UTF-8");
+		$new_password_hash=password_hash($new_password, PASSWORD_DEFAULT);
 		$old_password=$_POST['old_password'];
-		$old_password = htmlentities($old_password, ENT_QUOTES, "UTF-8");
+		$password=$_SESSION['password'];
 		$login=$_SESSION['username'];
 		$id=$_SESSION['id'];
-		$password=$_SESSION['password'];
+		if(password_verify($old_password, $password))
+		{
+			$wszystko_OK=true;
+		}
+		else
+		{
+			$wszystko_OK=false;
+			$_SESSION['error_password']="Błędne stare hasło!";
+		}
+
+		
 		
 		if(strlen($new_password)<5 || strlen($new_password)>15)
 		{
 			$wszystko_OK=false;
 			$_SESSION['error_password']="Hasło powinno zawierać od 5 do 15 znaków!";
 		}
-		
-		
-		if($old_password!=$password)
-		{
-			$wszystko_OK=false;
-			$_SESSION['error_password']="Błędne stare hasło!";
-		}
-		
-		
+
 		require_once "connect.php";
 		mysqli_report(MYSQLI_REPORT_STRICT);
 		
@@ -41,7 +43,7 @@
 			{
 				if($wszystko_OK==true)
 				{
-					if($polaczenie->query("UPDATE `users` SET `password`='$new_password' WHERE id='$id'"))
+					if($polaczenie->query("UPDATE `users` SET `password`='$new_password_hash' WHERE id='$id'"))
 						{
 							$_SESSION['udanaZmiana']=true;
 							$_SESSION['error_password']="Hasło zostało zmienione!";
@@ -54,7 +56,7 @@
 					if($_SESSION['udanaZmiana']==true)
 					{
 						unset($_SESSION['password']);
-						$_SESSION['password']=$new_password;
+						$_SESSION['password']=$new_password_hash;
 					}
 				}
 				else

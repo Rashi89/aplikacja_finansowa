@@ -19,7 +19,7 @@
 	margin-right:auto;
 	font-size: 40px;
 	color: white;
-	text-align: center;
+	text-align: right;
 }
 
 .data
@@ -149,4 +149,25 @@
 	margin-bottom:20px;
 	text-align: center;
 }
-
+@media(max-width:576px)
+{
+	.powitanie
+	{
+		text-align: center;
+	}
+}
+@media(max-width:767px)
+{
+	.powitanie
+	{
+		text-align: center;
+	}
+}
+@media(min-width:768px) and (max-width:991px)
+{
+		.powitanie
+	{
+		text-align: center;
+	
+	
+}

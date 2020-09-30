@@ -84,7 +84,7 @@
 	<link rel="stylesheet" href="css/coin.css">
 	<link rel="stylesheet" href="menu.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	
+	<link rel="stylesheet" href="zegar.css">
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
@@ -92,27 +92,11 @@
 </head>
 
 <body>
-		
-
-				<div class="container-fluid belka">
-				
-						<div class="row">
-							 <div class="col-lg-4 col-sm-12">  
-									<div style="text-align: center;"><img src="img/logo_small.png" class = "logo"/></div>
-							 </div>
-							 <div class="col-lg-8 col-sm-12">
-									<div class="powitanie">
-								<?php
-									echo "Witaj <b>". $username."</b> !";
-								?>
-								</div>
-							 </div>
-						</div>
-			
-				</div>
-		
+				<?php include 'belka.php'; ?>
 					<header>	
+					<div class="nawigacja">
 					<?php include 'menu.html'; ?>
+					</div>
 					</header>
 					
 			<main>
@@ -163,13 +147,15 @@
 				</footer>
 			</div>	
 			
+		<script src="jquery-3.5.1.min"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	
 		<script src="js/bootstrap.min.js"></script>
 		<script src="submenu.js"></script>
-					
+		<script type="text/javascript" src="zegarek.js"></script>
+		<script type="text/javascript" src="sticky-menu.js"></script>
 
 </body>
 </html>

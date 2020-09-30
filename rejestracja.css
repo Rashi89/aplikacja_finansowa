@@ -4,17 +4,6 @@ body
 	font-family: 'Open Sans', sans-serif;
 }
 
-
-h1.logo
-{
-	color:#1c525e;
-	font-size: 45px;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 8px;
-	
-}
-
 .info
 {
 	font-size:17px;
@@ -45,8 +34,9 @@ h1.logo
 	color:#1c525e !important;
 	font-size: 28px;
 	letter-spacing: 3px;
-	width:600px;
+
 	margin-left:50px;
+	font-weight:bold;
 }
 .napis1
 {
@@ -197,4 +187,70 @@ input[type=email]:focus
 .blad
 {
 	margin-left: 100px;
+}
+
+@media(max-width:576px)
+{
+.napis
+{
+	
+	font-size:20px;
+}
+.logotyp
+{
+	height:250px;
+	width:192px;
+	margin-top:0px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.info
+{
+	font-size:12px;
+}
+.stopka_menu
+{
+	font-size:11px;
+}
+input[type=text],
+input[type=password],
+input[type=email]
+{
+	width:250px;
+	background-color:white;
+	color:#666;
+	border: 2px solid #ddd;
+	font-size:20px;
+	padding:10px;
+	box-sizing: border-box;
+	outline:none;
+	margin-top:10px;
+	margin-left:0px;
+	
+}
+.rejestracja input[type=submit]
+{
+	width: 250px;
+}
+.anuluj 
+{
+	width: 250px;
+} 
+}
+@media(min-width:577px) and (max-width:991px)
+{
+	.logotyp
+{
+	height:250px;
+	width:192px;
+	margin-top:0px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+.stopka_menu
+{
+	font-size:14px;
+}
 }

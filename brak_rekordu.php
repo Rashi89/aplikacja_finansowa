@@ -35,19 +35,12 @@
 <body>
 		
 
-				<div class="container-fluid p-0">
-				
-						
-							 <div class = "logo">  
-									Witaj Agata
-							 </div>
-						
-			
-				</div>
+				<?php include 'belka.php'; ?>
 		
 					<header>	
+					<div class="nawigacja">
 					<?php include 'menu.html'; ?>
-
+					</div>
 					</header>
 					
 			<main>
@@ -97,7 +90,8 @@
 	
 		<script src="js/bootstrap.min.js"></script>
 		<script src="submenu.js"></script>
-					
+		<script type="text/javascript" src="zegarek.js"></script>
+		<script type="text/javascript" src="sticky-menu.js"></script>			
 
 </body>
 </html>
