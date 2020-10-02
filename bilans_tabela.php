@@ -191,7 +191,7 @@
 			<div class="container-fluid p-0 mt-4">
 				<footer class="page-footer font-small blue fixed-bottom">
 							<div class="stopka_menu">
-							 <p>Rashi Lavi na prezydenta Polszy! Wszelkie prawa zastrzeżone. Aplikacja w wykonaniu Rashi &copy;</p>
+								<p>Wszelkie prawa zastrzeżone. Copyright &copy; 2020 All Rights Reserved </p>
 							</div>
 				</footer>
 			</div>	

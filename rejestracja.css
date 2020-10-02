@@ -211,7 +211,7 @@ input[type=email]:focus
 }
 .stopka_menu
 {
-	font-size:11px;
+	font-size:12px;
 }
 input[type=text],
 input[type=password],
@@ -251,6 +251,6 @@ input[type=email]
 }
 .stopka_menu
 {
-	font-size:14px;
+	font-size:15px;
 }
 }

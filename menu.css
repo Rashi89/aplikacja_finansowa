@@ -151,3 +151,19 @@ ul > li
 .dropdown-submenu > a:focus, .dropdown-submenu > a:hover, .dropdown-submenu:focus>a, r, .dropdown-submenu:hover>a,
 .dropdown-menu > li a:hover,
 .dropdown-menu > li a:focus { background-color:#394754 !Important; background-image: none; filter: none; text-decoration: none; border: none; }
+
+@media(max-width:576px)
+{
+	.stopka_menu
+	{
+		font-size:12px !Important;
+	}
+}
+@media(max-width:767px)
+{
+	.stopka_menu
+	{
+		font-size:15px !Important;
+	}
+
+}
